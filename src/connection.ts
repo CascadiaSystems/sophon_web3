@@ -2398,11 +2398,11 @@ export class Connection {
   /**
    * Fetch the accounts for the specified owner key
    */
-  async getVelasAccountsByOwnerKey(
+  async getSophonAccountsByOwnerKey(
     publicKey: string,
   ): Promise<any> {
     try {
-      const res = await this._rpcRequest('getVelasAccountsByOwnerKey', [publicKey]);
+      const res = await this._rpcRequest('getSophonAccountsByOwnerKey', [publicKey]);
       return res.result.value
     } catch (e) {
       throw new Error('failed to get account by owner key ' + publicKey + ': ' + e);
@@ -2412,11 +2412,11 @@ export class Connection {
   /**
    * Fetch the accounts for the specified operational key
    */
-     async getVelasAccountsByOperationalKey(
+     async getSophonAccountsByOperationalKey(
       publicKey: string,
     ): Promise<any> {
       try {
-        const res = await this._rpcRequest('getVelasAccountsByOperationalKey', [publicKey]);
+        const res = await this._rpcRequest('getSophonAccountsByOperationalKey', [publicKey]);
         return res.result.value
       } catch (e) {
         throw new Error('failed to get account by operational key ' + publicKey + ': ' + e);
